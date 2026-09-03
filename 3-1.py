@@ -113,7 +113,12 @@ try:
 
 
     # 히스토그램 빈(bin) 수 조절
-
+    hist_bins = st.sidebar.slider(
+        '히스토그램 구간 수',
+        min_value=5,
+        max_value=100,
+        value=30
+    )
 
     # 추세선 차수 조절
     trend_degree = st.sidebar.slider(
