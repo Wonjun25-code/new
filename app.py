@@ -36,7 +36,6 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY'):
         xs = np.linspace(data.min(), data.max(), 200)
         density = gaussian_kde(data)
 
-        '''코드를 작성하시오'''
         axs[0, 1].hist(data, bins=30, density=True, alpha=0.6, color='gray', label='Histogram')
         axs[0, 1].plot(xs, density(xs), color='red', linewidth=2, label='Density')
     axs[0, 1].set_title("Distribution of Sunspot Activity")
@@ -81,7 +80,7 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY'):
     return fig
 
 # 메인 앱
-st.title('🌞 태양흑점 데이터 분석 대시보드 🌞')
+st.title('🌞태양흑점 데이터 분석 대시보드🌞')
 st.markdown("""
     이 대시보드는 태양흑점 데이터를 다양한 시각화 방법으로 보여줍니다.
     """)
